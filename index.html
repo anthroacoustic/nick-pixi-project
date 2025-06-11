@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixi.js See The Ball</title>
+    <style>body { margin: 0; }</style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/8.0.4/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/world.js"></script>
+    <script type="module" src="./src/physObj.js"></script>
+    <script type="module" src="./src/ball.js"></script>
+    <script type="module" src="./src/velocityChart.js"></script>
+    <div id="app">
+        <div id="pixi-container"></div>
+        <div id="app">
+            <div id="pixi-container"></div>
+            <input type="range" v-model="ballMass" min="0.5" max="5" step="0.1">
+            <p>Ball Mass: {{ ballMass }}</p>   
+            <velocity-chart :velocity-data="velocityData"></velocity-chart>
+          </div>
+      </div>
+</body>
+</html>
